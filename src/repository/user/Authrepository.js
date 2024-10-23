@@ -21,7 +21,19 @@ class UserRepository {
       });
       return true;
     } catch (error) {
-      console.log("something wrong in repository layer of register");
+      console.log("something wrong in repository layer of destroyr");
+      throw error;
+    }
+  }
+ 
+  async getById(userId) {
+    try {
+      const user = await Usermodel.findByPk(userId, {
+        attributes : ['email','id', 'name']
+      });
+      return user;
+    } catch (error) {
+      console.log("something wrong in repository layer of getuser");
       throw error;
     }
   }

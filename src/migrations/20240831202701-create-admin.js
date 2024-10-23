@@ -18,10 +18,12 @@ module.exports = {
         }
       },
       password: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull:false
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull:false
       },
       createdAt: {
         allowNull: false,

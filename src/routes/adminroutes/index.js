@@ -1,9 +1,9 @@
 const express = require('express');
 
-const v1UserAuthApi = require('./v1/index');
+const V1AdminAuth = require('./v1/index');
 
 const router = express.Router();
 
-router.use('/v1', v1UserAuthApi);
+router.use('/v1', V1AdminAuth);
 
 module.exports = router;
